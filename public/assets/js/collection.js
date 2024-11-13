@@ -13,7 +13,7 @@ async function fetchAndDisplayProducts(category) {
 
     try {
         // Fetch the JSON data from the file
-        const response = await fetch('product.json');
+        const response = await fetch('assets/json/product.json');
         const products = await response.json();
 
         // Filter products by category
