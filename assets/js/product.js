@@ -20,7 +20,6 @@ async function displayProductDetails(style) {
                 </div>
                 <div class="col-2">
                     <h2>Style: ${product.style}</h2>
-                    <h2>Price: ${product.price}</h2>
                     <p>Description: ${product.description}</p>
                 </div>
             `;
