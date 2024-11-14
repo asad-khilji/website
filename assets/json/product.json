@@ -3,91 +3,91 @@
         "style": "6905.LA",
         "price": "$249.99", 
         "description": "Mens Premium Leather Jacket",
-        "image": "assets/images/6905-LA-Front.jpg",
+        "image": "assets/images/6905-LA-Front.webp",
         "category": "Mens Leather Jacket"
     },
     {
         "style": "6905.LA",
         "price": "$249.99", 
         "description": "Mens Premium Leather Jacket",
-        "image": "assets/images/6905-LA-Front.jpg",
+        "image": "assets/images/6905-LA-Front.webp",
         "category": "Mens Leather Jacket"
     },
     {
         "style": "6905.LA",
         "price": "$249.99", 
         "description": "Mens Premium Leather Jacket",
-        "image": "assets/images/6905-LA-Front.jpg",
+        "image": "assets/images/6905-LA-Front.webp",
         "category": "Mens Leather Jacket"
     },
     {
         "style": "6905.LA",
         "price": "$249.99", 
         "description": "Mens Premium Leather Jacket",
-        "image": "assets/images/6905-LA-Front.jpg",
+        "image": "assets/images/6905-LA-Front.webp",
         "category": "Mens Leather Jacket"
     },
     {
         "style": "6905.LA",
         "price": "$249.99", 
         "description": "Mens Premium Leather Jacket",
-        "image": "assets/images/6905-LA-Front.jpg",
+        "image": "assets/images/6905-LA-Front.webp",
         "category": "Mens Leather Jacket"
     },
     {
         "style": "6655.00",
         "price": "$129.99", 
         "description": "Mens Premium Leather Vest",
-        "image": "assets/images/6655-00-Front.jpg",
+        "image": "assets/images/6655-00-Front.webp",
         "category": "Mens Leather Vest"
     },
     {
         "style": "720.00",
         "price": "$109.99", 
         "description": "Mens Premium Leather Chaps",
-        "image": "assets/images/720-00.jpg",
+        "image": "assets/images/720-00.webp",
         "category": "Mens Leather Chaps"
     },
     {
         "style": "TW205.20",
         "price": "$99.99", 
         "description": "Mens Gray Flannel Shirt",
-        "image": "assets/images/TW205-20-Front.jpg",
+        "image": "assets/images/TW205-20-Front.webp",
         "category": "Mens Flannel Shirt"
     },
     {
         "style": "8000.00",
         "price": "$49.99", 
         "description": "Mens Hoodie Sweathshirt with skull design",
-        "image": "assets/images/8000-00-Front.jpg",
+        "image": "assets/images/8000-00-Front.webp",
         "category": "Mens Hoodie"
     },
     {
         "style": "2151.PL",
         "price": "$29.99", 
         "description": "Ladies Premium Leather clip on bag",
-        "image": "assets/images/2151-PL-1.jpg",
+        "image": "assets/images/2151-PL-1.webp",
         "category": "Ladies Clip on Bag"
     },
     {
         "style": "8324.00",
         "price": "$24.99", 
         "description": "Mens Full Finger Gloves with knuckle armor",
-        "image": "assets/images/8324.00-1.jpg",
+        "image": "assets/images/8324.00-1.webp",
         "category": "Mens Full Finger Gloves"
     },
     {
         "style": "9083.00",
         "price": "$24.99", 
         "description": "7 x 3 Biker Chain Wallets",
-        "image": "assets/images/9083-00-1.jpg",
+        "image": "assets/images/9083-00-1.webp",
         "category": "Biker Chain Wallets"
     },
     {
         "style": "5755.AS",
         "price": "$9.99", 
         "description": "Vest Extenders 4 inches",
-        "image": "assets/images/5755-AS.jpg",
+        "image": "assets/images/5755-AS.webp",
         "category": "Accessories"
     }
 ]
