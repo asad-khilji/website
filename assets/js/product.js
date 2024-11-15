@@ -9,6 +9,7 @@ async function displayProductDetails(style) {
     try {
         // Fetch the Excel file
         const response = await fetch('assets/excel/products.xlsx');
+        if (!response.ok) throw new Error('Failed to fetch Excel file.');
         const arrayBuffer = await response.arrayBuffer();
 
         // Read the Excel file
@@ -46,17 +47,20 @@ async function displayProductDetails(style) {
             document.getElementById('cart-btn').addEventListener('click', () => {
                 const selectedSize = document.getElementById('size-select').value;
                 // Redirect to cart page with product details as query parameters
-                window.location.href = `mailto:khiljiasad2@gmail.com?style=${encodeURIComponent(product.style)}&price=${encodeURIComponent(product.price)}&size=${encodeURIComponent(selectedSize)}';
+                window.location.href = `mailto:khiljiasad2@gmail.com?style=${encodeURIComponent(product.style)}&price=${encodeURIComponent(product.price)}&size=${encodeURIComponent(selectedSize)}`;
             });
         } else {
-            productContainer.innerHTML = `<p>Product not found.</p>`;
+            productContainer.innerHTML = `<p>Product not found. <a href="/">Return to product list</a></p>`;
         }
     } catch (error) {
         console.error("Error fetching product details:", error);
+        productContainer.innerHTML = `<p>Something went wrong. Please try again later.</p>`;
     }
 }
 
 // Call the function with the selected style
 if (selectedStyle) {
     displayProductDetails(selectedStyle);
+} else {
+    document.getElementById('product-details').innerHTML = `<p>No product selected. <a href="/">Return to product list</a></p>`;
 }
