@@ -3,7 +3,7 @@ const createHeader = () => {
 
     header.innerHTML = `
     <header>
-      <a href="index.html"><h1>Title</h1></a>
+      <a href="index.html"><h1>Serenity</h1></a>
     </header>
     `;
 }
