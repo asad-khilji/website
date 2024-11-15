@@ -47,6 +47,19 @@ header .search {
     margin-left: -5px;
 }
 
+/* assets/css/style.css */
+
+.result-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.no-results {
+    color: #888;
+    font-style: italic;
+    padding: 10px;
+}
+
 main {
     max-width: 1250px;
     margin: auto;

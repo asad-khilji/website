@@ -1,8 +1,9 @@
+// Load the category from URL parameters
 const urlParams = new URLSearchParams(window.location.search);
 const selectedCategory = urlParams.get('category');
 
 // Pagination variables
-let itemsPerPage = 16; // Number of products per page
+let itemsPerPage = 16;
 let currentPage = 1;
 let totalPages = 4;
 
@@ -12,9 +13,17 @@ async function fetchAndDisplayProducts(category) {
     container.innerHTML = '';
 
     try {
-        // Fetch the JSON data from the file
-        const response = await fetch('assets/json/product.json');
-        const products = await response.json();
+        // Fetch the Excel file
+        const response = await fetch('assets/excel/products.xlsx');
+        const arrayBuffer = await response.arrayBuffer();
+
+        // Read the Excel file
+        const workbook = XLSX.read(arrayBuffer, { type: 'array' });
+        const firstSheetName = workbook.SheetNames[0];
+        const worksheet = workbook.Sheets[firstSheetName];
+
+        // Convert the sheet data to JSON
+        const products = XLSX.utils.sheet_to_json(worksheet);
 
         // Filter products by category
         const filteredProducts = products.filter(product => product.category === category);

@@ -7,8 +7,17 @@ async function displayProductDetails(style) {
     productContainer.innerHTML = '';
 
     try {
-        const response = await fetch('assets/json/product.json');
-        const products = await response.json();
+        // Fetch the Excel file
+        const response = await fetch('assets/excel/products.xlsx');
+        const arrayBuffer = await response.arrayBuffer();
+
+        // Read the Excel file
+        const workbook = XLSX.read(arrayBuffer, { type: 'array' });
+        const firstSheetName = workbook.SheetNames[0];
+        const worksheet = workbook.Sheets[firstSheetName];
+
+        // Convert the sheet data to JSON
+        const products = XLSX.utils.sheet_to_json(worksheet);
 
         // Find the product that matches the selected style
         const product = products.find(product => product.style === style);
@@ -35,4 +44,3 @@ async function displayProductDetails(style) {
 if (selectedStyle) {
     displayProductDetails(selectedStyle);
 }
-

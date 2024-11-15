@@ -1,8 +1,18 @@
 async function loadCategories() {
     try {
-        const response = await fetch('assets/json/categories.json');
-        const categories = await response.json();
+        // Fetch the Excel file
+        const response = await fetch('assets/excel/categories.xlsx');
+        const arrayBuffer = await response.arrayBuffer();
 
+        // Read the Excel file
+        const workbook = XLSX.read(arrayBuffer, { type: 'array' });
+        const firstSheetName = workbook.SheetNames[0];
+        const worksheet = workbook.Sheets[firstSheetName];
+
+        // Convert the sheet data to JSON
+        const categories = XLSX.utils.sheet_to_json(worksheet);
+
+        // Get the container for categories
         const categoryContainer = document.getElementById('categoryContainer');
 
         categories.forEach((item, index) => {
