@@ -28,8 +28,9 @@ async function displayProductDetails(style) {
                     <img src="${product.image}" alt="${product.description}">
                 </div>
                 <div class="col-2">
-                    <h2>Style: ${product.style}</h2>
-                    <p>Description: ${product.description}</p>
+                    <h2>${product.style}</h2>
+                    <h2>${product.price}</h2>
+                    <p>${product.description}</p>
                 </div>
             `;
         } else {
