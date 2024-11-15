@@ -46,7 +46,7 @@ async function displayProductDetails(style) {
             document.getElementById('cart-btn').addEventListener('click', () => {
                 const selectedSize = document.getElementById('size-select').value;
                 // Redirect to cart page with product details as query parameters
-                window.location.href = `mailto:khiljiasad2@gmail.com?subject=${encodeURIComponent(product.style)}&price=${encodeURIComponent(product.price)}&size=${encodeURIComponent(selectedSize)};
+                window.location.href = `mailto:khiljiasad2@gmail.com?subject=${encodeURIComponent(product.style)}&price=${encodeURIComponent(product.price)}&size=${encodeURIComponent(selectedSize)}';
             });
         } else {
             productContainer.innerHTML = `<p>Product not found.</p>`;
