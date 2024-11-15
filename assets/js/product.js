@@ -24,15 +24,30 @@ async function displayProductDetails(style) {
 
         if (product) {
             productContainer.innerHTML = `
-                 <div class="col-2">
+                <div class="col-2">
                     <img src="${product.image}" alt="${product.description}">
                 </div>
                 <div class="col-2">
                     <h2>${product.style}</h2>
                     <h2>${product.price}</h2>
                     <p>${product.description}</p>
+                    <button type="submit" class="cart-btn" id="cart-btn">Add to Cart</button>
+                    <select class="size-variant" id="size-select">
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                        <option>2XL</option>
+                    </select>
                 </div>
             `;
+
+            // Add event listener for cart redirection
+            document.getElementById('cart-btn').addEventListener('click', () => {
+                const selectedSize = document.getElementById('size-select').value;
+                // Redirect to cart page with product details as query parameters
+                window.location.href = `cart.html?style=${encodeURIComponent(product.style)}&price=${encodeURIComponent(product.price)}&size=${encodeURIComponent(selectedSize)}`;
+            });
         } else {
             productContainer.innerHTML = `<p>Product not found.</p>`;
         }

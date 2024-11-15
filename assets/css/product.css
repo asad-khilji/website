@@ -28,12 +28,32 @@
     color: black;
 }
 
+.col-2 .cart-btn {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    margin-left: -600px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.col-2 .size-variant {
+    padding: 10px;
+    margin-left: -220px;
+}
+
 @media (max-width: 768px) {
     .col-2 {
         flex-basis: 50%;
     }
     .col-2 h2, p {
         margin-left: 125px;
+    }
+
+    .col-2 .cart-btn {
+        margin-left: -150px;
+        margin-bottom: 25px;
     }
 }
 

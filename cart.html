@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/cart.css">
+</head>
+<body>
+
+    <header></header>
+
+    <nav></nav>
+
+    <main>
+        <div id="cart-container">
+            <table id="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product Image</th>
+                        <th>Style</th>
+                        <th>Size</th>
+                        <th>Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Cart items will be dynamically added here -->
+                </tbody>
+            </table>
+            <div id="cart-summary">
+                <h2>Total: <span id="cart-total">0</span></h2>
+                <button id="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/cart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
+    
+</body>
+</html>
