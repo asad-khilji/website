@@ -42,11 +42,24 @@ async function displayProductDetails(style) {
                 </div>
             `;
 
-            // Add event listener for cart redirection
+            // Add event listener for adding to cart and redirection
             document.getElementById('cart-btn').addEventListener('click', () => {
                 const selectedSize = document.getElementById('size-select').value;
-                // Redirect to cart page with product details as query parameters
-                window.location.href = `mailto:khiljiasad2@gmail.com?style=${encodeURIComponent(product.style)}&price=${encodeURIComponent(product.price)}&size=${encodeURIComponent(selectedSize)}`;
+                const cartItem = {
+                    style: product.style,
+                    price: product.price,
+                    size: selectedSize,
+                    image: product.image,
+                    description: product.description
+                };
+
+                // Save to localStorage
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.push(cartItem);
+                localStorage.setItem('cart', JSON.stringify(cart));
+
+                // Redirect to cart page
+                window.location.href = 'cart.html';
             });
         } else {
             productContainer.innerHTML = `<p>Product not found.</p>`;
