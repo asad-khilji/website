@@ -9,6 +9,7 @@ async function displayProductDetails(style) {
     try {
         // Fetch the Excel file
         const response = await fetch('assets/excel/products.xlsx');
+        if (!response.ok) throw new Error('Failed to fetch Excel file.');
         const arrayBuffer = await response.arrayBuffer();
 
         // Read the Excel file
@@ -62,14 +63,17 @@ async function displayProductDetails(style) {
                 window.location.href = 'cart.html';
             });
         } else {
-            productContainer.innerHTML = `<p>Product not found.</p>`;
+            productContainer.innerHTML = `<p>Product not found. <a href="/">Return to product list</a></p>`;
         }
     } catch (error) {
         console.error("Error fetching product details:", error);
+        productContainer.innerHTML = `<p>Something went wrong. Please try again later.</p>`;
     }
 }
 
 // Call the function with the selected style
 if (selectedStyle) {
     displayProductDetails(selectedStyle);
+} else {
+    document.getElementById('product-details').innerHTML = `<p>No product selected. <a href="/">Return to product list</a></p>`;
 }
