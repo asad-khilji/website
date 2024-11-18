@@ -6,23 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/checkout.css">
 </head>
 <body>
     <header></header>
     <nav></nav>
     <main>
-        <form id="checkout-form">
+        <form action="https://formsubmit.co/khiljiasad2@gmail.com" method="post">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             
             <label for="address">Address:</label>
             <textarea id="address" name="address" required></textarea>
+
+            <label for="size">Size:</label>
+            <input type="text" id="size" name="size" required>
+
+            <label for="qty">Qty:</label>
+            <input type="text" id="qty" name="qty" required>
             
             <label for="payment-method">Payment Method:</label>
             <select id="payment-method" name="payment-method">
                 <option value="credit-card">Credit Card</option>
                 <option value="paypal">PayPal</option>
             </select>
+
+             <!-- Hidden field for redirecting to the thank-you page -->
+        <input type="hidden" name="_next" value="http://127.0.0.1:5500//thank-you">
             
             <button type="submit">Place Order</button>
         </form>

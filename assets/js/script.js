@@ -23,7 +23,7 @@ const createNav = () => {
             <a href="collection.html?category=Category">Category</a>
             <a href="collection.html?category=Category">Category</a>
             <a href="collection.html?category=Category">Category</a>
-            <a href="collection.html?category=Category">Category</a>
+            <a href="./cart.html">Cart</a>
         </nav>
     `;
 }
