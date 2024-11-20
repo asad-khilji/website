@@ -1,0 +1,74 @@
+[
+    {
+        "style": "Product",
+        "price": 49.99,
+        "category": "Category",
+        "sizes": "S,M,L,XL,2XL",
+        "description": "Item Description ",
+        "image": "assets/images/image.webp"
+    },
+    {
+        "style": "Product",
+        "price": 49.99,
+        "category": "Category",
+        "sizes": "S,M,L,XL,2XL",
+        "description": "Item Description ",
+        "image": "assets/images/image.webp"
+    },
+    {
+        "style": "Product",
+        "price": 49.99,
+        "category": "Category",
+        "sizes": "S,M,L,XL,2XL",
+        "description": "Item Description ",
+        "image": "assets/images/image.webp"
+    },
+    {
+        "style": "Product",
+        "price": 49.99,
+        "category": "Category",
+        "sizes": "S,M,L,XL,2XL",
+        "description": "Item Description ",
+        "image": "assets/images/image.webp"
+    },
+    {
+        "style": "Product",
+        "price": 49.99,
+        "category": "Category",
+        "sizes": "S,M,L,XL,2XL",
+        "description": "Item Description ",
+        "image": "assets/images/image.webp"
+    },
+    {
+        "style": "Product",
+        "price": 49.99,
+        "category": "Category",
+        "sizes": "S,M,L,XL,2XL",
+        "description": "Item Description ",
+        "image": "assets/images/image.webp"
+    },
+    {
+        "style": "Product",
+        "price": 49.99,
+        "category": "Category",
+        "sizes": "S,M,L,XL,2XL",
+        "description": "Item Description ",
+        "image": "assets/images/image.webp"
+    },
+    {
+        "style": "Product",
+        "price": 49.99,
+        "category": "Category",
+        "sizes": "S,M,L,XL,2XL",
+        "description": "Item Description ",
+        "image": "assets/images/image.webp"
+    },
+    {
+        "style": "Product",
+        "price": 49.99,
+        "category": "Category",
+        "sizes": "S,M,L,XL,2XL",
+        "description": "Item Description ",
+        "image": "assets/images/image.webp"
+    }
+]

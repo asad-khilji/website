@@ -4,6 +4,9 @@ const createHeader = () => {
     header.innerHTML = `
     <header>
       <a href="index.html"><h1>Serenity</h1></a>
+      <div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Search for products..." />
+</div>
     </header>
     `;
 }
@@ -43,3 +46,41 @@ const createFooter = () => {
 createFooter();
 
 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const searchInput = document.getElementById("searchInput");
+  const searchResults = document.getElementById("searchResults");
+
+  // Fetch the product data
+  fetch("assets/js/products.json")
+    .then((response) => response.json())
+    .then((products) => {
+      searchInput.addEventListener("input", function () {
+        const query = searchInput.value.toLowerCase();
+        const filteredProducts = products.filter((product) =>
+          product.style.toLowerCase().includes(query)
+        );
+
+        // Clear previous results
+        searchResults.innerHTML = "";
+
+        // Display filtered products
+        if (filteredProducts.length > 0) {
+          filteredProducts.forEach((product) => {
+            const productDiv = document.createElement("div");
+            productDiv.classList.add("product");
+            productDiv.innerHTML = `
+              <img src="${product.image}" alt="${product.style}" />
+              <h3>${product.style}</h3>
+              <p>${product.description}</p>
+              <p><strong>Price:</strong> $${product.price}</p>
+            `;
+            searchResults.appendChild(productDiv);
+          });
+        } else {
+          searchResults.innerHTML = "<p>No products found.</p>";
+        }
+      });
+    })
+    .catch((error) => console.error("Error fetching products:", error));
+});
