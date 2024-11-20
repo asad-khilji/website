@@ -70,10 +70,12 @@ document.addEventListener("DOMContentLoaded", function () {
             const productDiv = document.createElement("div");
             productDiv.classList.add("product");
             productDiv.innerHTML = `
-              <img src="${product.image}" alt="${product.style}" />
+            <a href="product.html?style=${product.style}">  
+            <img src="${product.image}" alt="${product.style}" />
               <h3>${product.style}</h3>
               <p>${product.description}</p>
               <p><strong>Price:</strong> $${product.price}</p>
+              </a>
             `;
             searchResults.appendChild(productDiv);
           });

@@ -29,6 +29,12 @@ nav a {
     padding: 10px;
 }
 
+.product a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+
 /* Search Bar Styling */
 .search-bar {
     margin: 20px auto;
