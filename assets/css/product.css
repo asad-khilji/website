@@ -43,6 +43,10 @@
     margin-left: -220px;
 }
 
+.quantity-selector {
+    margin-left: -550px;
+}
+
 @media (max-width: 768px) {
     .col-2 {
         flex-basis: 50%;
@@ -54,6 +58,10 @@
     .col-2 .cart-btn {
         margin-left: -150px;
         margin-bottom: 25px;
+    }
+    
+    .quantity-selector {
+        margin-left: 25px;
     }
 }
 

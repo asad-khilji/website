@@ -24,21 +24,24 @@ async function displayProductDetails(style) {
         const product = products.find(product => product.style === style);
 
         if (product) {
+            // Generate the size options dynamically
+            const sizes = product.sizes.split(',').map(size => `<option>${size.trim()}</option>`).join('');
+
             productContainer.innerHTML = `
                 <div class="col-2">
                     <img src="${product.image}" alt="${product.description}">
                 </div>
                 <div class="col-2">
                     <h2>${product.style}</h2>
-                    <h2>${product.price}</h2>
+                    <h2>$${product.price}</h2>
                     <p>${product.description}</p>
+                    <div class="quantity-selector">
+                        <label for="quantity-input">Quantity:</label>
+                        <input type="number" id="quantity-input" value="1" min="1" />
+                    </div>
                     <button type="submit" class="cart-btn" id="cart-btn">Add to Cart</button>
                     <select class="size-variant" id="size-select">
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                        <option>2XL</option>
+                        ${sizes}
                     </select>
                 </div>
             `;
@@ -46,10 +49,12 @@ async function displayProductDetails(style) {
             // Add event listener for adding to cart and redirection
             document.getElementById('cart-btn').addEventListener('click', () => {
                 const selectedSize = document.getElementById('size-select').value;
+                const quantity = parseInt(document.getElementById('quantity-input').value, 10);
                 const cartItem = {
                     style: product.style,
                     price: product.price,
                     size: selectedSize,
+                    quantity,
                     image: product.image,
                     description: product.description
                 };

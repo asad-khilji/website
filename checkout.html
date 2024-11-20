@@ -12,33 +12,39 @@
     <header></header>
     <nav></nav>
     <main>
-        <form action="https://formsubmit.co/khiljiasad2@gmail.com" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="address">Address:</label>
-            <textarea id="address" name="address" required></textarea>
+        <h1>Checkout</h1><br>
+        <section id="cart-summary">
+            <h2>Order Summary</h2><br>
+            <div id="cart-items"></div>
+            <p><strong>Grand Total:</strong> $<span id="grand-total">0.00</span></p>
+        </section>
+        
+        <section id="checkout-form">
+            <form id="checkout" action="https://formsubmit.co/khiljiasad2@gmail.com" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required></textarea>
 
-            <label for="size">Size:</label>
-            <input type="text" id="size" name="size" required>
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method" name="payment-method">
+                    <option value="credit-card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                </select>
 
-            <label for="qty">Qty:</label>
-            <input type="text" id="qty" name="qty" required>
-            
-            <label for="payment-method">Payment Method:</label>
-            <select id="payment-method" name="payment-method">
-                <option value="credit-card">Credit Card</option>
-                <option value="paypal">PayPal</option>
-            </select>
+                <!-- Hidden fields for cart details -->
+                <div id="hidden-fields"></div>
 
-             <!-- Hidden field for redirecting to the thank-you page -->
-        <input type="hidden" name="_next" value="http://127.0.0.1:5500//thank-you">
-            
-            <button type="submit">Place Order</button>
-        </form>
+                <!-- Hidden field for redirecting to the thank-you page -->
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500//thank-you">
+                
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
     </main>
     <footer></footer>
-    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/checkout.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>

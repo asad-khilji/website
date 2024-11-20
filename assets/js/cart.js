@@ -12,26 +12,56 @@ function removeFromCart(index) {
     updateCartUI();
 }
 
-// Function to update the UI with cart details
+// Function to update the cart UI
 function updateCartUI() {
     const cartItemsDiv = document.getElementById('cart-items');
     const cartTotalSpan = document.getElementById('cart-total');
-    
+
     cartItemsDiv.innerHTML = '';
     let total = 0;
 
     cart.forEach((item, index) => {
         const itemDiv = document.createElement('div');
-        itemDiv.textContent = `${item.style} - $${item.price}`;
-        
-        // Add a Remove button
+        itemDiv.classList.add('cart-item');
+
+        // Display product details
+        itemDiv.innerHTML = `
+            <span>${item.style} (${item.size}) - $${item.price}</span>
+        `;
+
+        // Quantity selector
+        const quantityInput = document.createElement('input');
+        quantityInput.type = 'number';
+        quantityInput.value = item.quantity;
+        quantityInput.min = 1;
+        quantityInput.classList.add('quantity-input');
+
+        // Update button
+        const updateButton = document.createElement('button');
+        updateButton.textContent = 'Update';
+        updateButton.classList.add('update-button');
+
+        updateButton.onclick = () => {
+            const newQuantity = parseInt(quantityInput.value, 10);
+            if (newQuantity > 0) {
+                item.quantity = newQuantity;
+                updateCartUI();
+            }
+        };
+
+        // Remove button
         const removeButton = document.createElement('button');
         removeButton.textContent = 'Remove';
-        removeButton.onclick = () => removeFromCart(index); // Attach event handler
+        removeButton.classList.add('remove-button');
+        removeButton.onclick = () => removeFromCart(index);
 
+        itemDiv.appendChild(quantityInput);
+        itemDiv.appendChild(updateButton);
         itemDiv.appendChild(removeButton);
         cartItemsDiv.appendChild(itemDiv);
-        total += item.price;
+
+        // Update total price
+        total += item.price * item.quantity;
     });
 
     cartTotalSpan.textContent = `$${total.toFixed(2)}`;
