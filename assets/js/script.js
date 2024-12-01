@@ -3,7 +3,7 @@ const createHeader = () => {
 
     header.innerHTML = `
     <header>
-      <a href="index.html"><h1>Serenity</h1></a>
+      <a href="dashboard.html"><h1>Serenity</h1></a>
       <div class="search-bar">
   <input type="text" id="searchInput" placeholder="Search for products..." />
 </div>

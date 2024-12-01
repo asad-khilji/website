@@ -6,8 +6,10 @@ function checkCredentials() {
     const correctPassword = "yourpassword"; // Change to your desired password
 
     if (enteredUsername === correctUsername && enteredPassword === correctPassword) {
-        window.location.href = "index.html"; // Redirect to your main page
+        window.location.href = "dashboard.html"; // Redirect to your main page
     } else {
         document.getElementById("error").innerText = "Incorrect username or password!";
     }
 }
+
+ 
