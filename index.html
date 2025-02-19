@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="./assets/css/password.css">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>Enter Credentials</h1>
-        <input type="text" id="username" placeholder="Username">
-        <input type="password" id="password" placeholder="Password">
-        <button onclick="checkCredentials()">Submit</button>
-        <p id="error"></p>
-    </div>
+    <header></header>
 
-    <script src="./assets/js/password.js"></script>
-    
+    <nav></nav>
+
+    <div id="searchResults"></div>
+
+    <main class="category" id="categoryContainer"></main>
+
+    <footer></footer>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
+
 </body>
 </html>
